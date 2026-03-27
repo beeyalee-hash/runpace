@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434446841196",
+    "project_id": "runpace-d554a",
+    "storage_bucket": "runpace-d554a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434446841196:android:a725b4afda29e23723ef49",
+        "android_client_info": {
+          "package_name": "com.runningbk.runpace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFFuGbC572GxIKn0YUugILXrPTQ8GV7Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

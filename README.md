@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RunPace
 
-## Getting Started
+RunPace is a pace calculator app for runners. The web app is built with Next.js and can also be packaged as an Android app through Capacitor.
 
-First, run the development server:
+## Features
+
+- Marathon goal time to average pace and split times
+- Pace to finish time calculator for custom distances
+- 400m track workout calculator with 100m/200m/300m/400m splits
+- Static export setup for mobile app packaging
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- Capacitor 8 (Android)
+
+## Project Structure
+
+- `app/`: App Router pages, layout, and global styles
+- `components/`: calculator UI components
+- `lib/`: pace calculation utilities
+- `android/`: Capacitor Android project
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the web app in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run lint:
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+Create a production build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project uses `next build --webpack` for production builds so the build works reliably in restricted local environments as well.
 
-## Deploy on Vercel
+## Android App
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Capacitor app settings:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- App name: `RunPace`
+- App ID: `com.runningbk.runpace`
+- Web output directory: `out`
+
+After generating a static web build, sync it into the Android project with Capacitor if needed:
+
+```bash
+npx cap sync android
+```
+
+Then open the Android project in Android Studio:
+
+```bash
+npx cap open android
+```
+
+## Current Status
+
+- Core calculator features are implemented
+- Web lint and production build are passing
+- Android project is present and connected through Capacitor
+- README now reflects the real app instead of the default Next.js template
